@@ -1,0 +1,31 @@
+https://docs.python.org/3/
+#crear virutal environment en phyton
+# prefereible manejar con git
+git init
+
+py -m venv venv
+# despues activarlo
+./venv/Scripts/activate
+#desactivarlo
+deactivate
+# crear alias
+alias avenv = ./venv/Scripts/activate
+# pero esto se desactiva cada vez que salimos de nuestro editor
+
+# luego  ejecutamos comando pip freeze para saber que tenemos instaldo en nuestroentorno virutal
+pip freeze
+
+# comenzamos a instalar cada modulo. Pandas es bueno para la ciencia de datos
+pip install pandas
+# puede ser que pip te recomiende alguna actualizacon y te presenta el respectivo comando
+# ahora a comparatir nuestro entorno con otra persona
+pip freeze > requirements.txt
+# este archivo es paa que la otra persona conozca exactamente cuales dependencias necesita
+# por el otro lado, el solo ejecutara la siguiente instruccion
+pip install -r requirements.txt
+# ademas de pip existen otros manejadores de dependencias de python
+
+## el environment no necesita ser pasado a github, por lo que se debe cerar el archivo .gitignore para que no suba
+# dentro de gitignore se pone la carpeta venv/
+:x
+
